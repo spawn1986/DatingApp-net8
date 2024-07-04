@@ -4,11 +4,12 @@ import { ActivatedRoute } from '@angular/router';
 import { Member } from '../../_models/member';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { GalleryItem, GalleryModule, ImageItem } from 'ng-gallery';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-member-detail',
   standalone: true,
-  imports: [TabsModule, GalleryModule],
+  imports: [TabsModule, GalleryModule, DatePipe],
   templateUrl: './member-detail.component.html',
   styleUrl: './member-detail.component.css'
 })

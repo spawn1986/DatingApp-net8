@@ -86,10 +86,10 @@
   <pagination
     [boundaryLinks]="true"
     [totalItems]="
-      (this.memberService.paginatedResults()?.pagination)!.totalItems
+      (memberService.paginatedResults()?.pagination)!.totalItems
     "
     [itemsPerPage]="
-      (this.memberService.paginatedResults()?.pagination)!.itemsPerPage
+      (memberService.paginatedResults()?.pagination)!.itemsPerPage
     "
     (pageChanged)="pageChanged($event)"
     [maxSize]="10"

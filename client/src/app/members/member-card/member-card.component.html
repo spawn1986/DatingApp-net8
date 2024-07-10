@@ -20,7 +20,11 @@
         </button>
       </li>
       <li class="list-inline-item">
-        <button class="btn btn-primary">
+        <button
+          class="btn btn-primary"
+          routerLink="/members/{{ member().username }}"
+          [queryParams]="{ tab: 'Messages' }"
+        >
           <i class="fa fa-envelope"></i>
         </button>
       </li>
@@ -32,7 +36,7 @@
       <i class="fa fa-user me-2"></i>
       {{ member().knownAs }}, {{ member().age }}
       @if(hasLiked()){
-        <i class="fa fa-heart ms-2" style="color: red;"></i>
+      <i class="fa fa-heart ms-2" style="color: red"></i>
       }
     </h6>
     <p class="card-text text-muted text-center">
